@@ -10,5 +10,5 @@ This repo is for me to learn and make small programs with the GO Lang Language
 - Then clone this repo, into your respective folder
 - Once done, open terminal and go to the path where you copied this git repo
 - Once in project, to execute each respective go file, run either
-	- go run <filename>.go, this will execute the file once runtime has been build for instance
-	- go build <fileName>.go, then execute the executable that was compiled
+	- go run "fileName".go, this will execute the file once runtime has been build for instance
+	- go build "fileName".go, then execute the executable that was compiled
