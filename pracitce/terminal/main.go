@@ -21,7 +21,7 @@ func main() {
 
 		}
 		stringInput = strings.TrimSpace(stringInput)
-		if strings.Contains(stringInput, "hello") == true{
+		if strings.Contains(stringInput, "hello") == true {
 			fmt.Println("Hello there")
 		}
 		if strings.Contains(stringInput, "goodbye") == true {
