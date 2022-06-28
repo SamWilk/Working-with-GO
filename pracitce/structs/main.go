@@ -14,6 +14,8 @@ func main() {
 		fmt.Println(value)
 	}
 	fmt.Printf("%+v\n", kirby)
+	kirby.SpeakOnce()
+	kirby.Speak()
 	kirby.Speak()
 }
 
@@ -28,10 +30,17 @@ type Dog struct {
 //Speak is how the dog speaks
 /*
 This is acting in the way of if an "object" of type Dog calls this method
-then the method will return that instance of whatever the field is assigned too
+then the method will return that instance (copy of object not a reference) of whatever the field is assigned too
 Example: kirby.Sound = "Woof", when this method is called from the kirby variable,
 it will print "Woof"
 */
-func (d Dog) Speak() {
+func (d *Dog) Speak() {
+	d.Sound = fmt.Sprintf("%v %v %v", d.Sound, d.Sound, d.Sound)
+	fmt.Println(d.Sound)
+}
+
+//SpeakOnce is how the dog speaks
+//Passed a copy here of type Dog
+func (d Dog) SpeakOnce() {
 	fmt.Println(d.Sound)
 }
