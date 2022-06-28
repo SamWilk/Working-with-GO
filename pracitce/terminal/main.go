@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strings"
 )
 
 func main() {
@@ -19,9 +20,13 @@ func main() {
 		if error != nil {
 
 		}
-		switch stringInput {
-		case "Hello":
-
+		stringInput = strings.TrimSpace(stringInput)
+		if strings.Contains(stringInput, "hello") == true{
+			fmt.Println("Hello there")
+		}
+		if strings.Contains(stringInput, "goodbye") == true {
+			fmt.Println("Goodbye for now")
+			break
 		}
 	}
 }
